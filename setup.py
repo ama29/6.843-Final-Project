@@ -16,10 +16,12 @@ setup(
         'pybullet==2.6.4',
         'pytest',
         'pydot',
-        'PyYAML',
+        'pyyaml==5.4.1',
         'seaborn',
         'scikit-learn',
         'tqdm',
         'paramiko',
+        "h5py<3.0.0",
+        "numba",
     ],
 )

@@ -79,10 +79,10 @@ SAC:
   max_iters: 400
   batch_size: 64
   layers: [64, 64]
-  buffer_size: 1000000
+  buffer_size: 100000
   step_size: 0.0003
   tensorboard_logs: !!null
-  total_timesteps: 2000000
+  total_timesteps: 200000
   save_dir: sac2m_depth_obs
 
 PPO:

@@ -149,3 +149,7 @@ encoder_images.pkl
 notebooks/
 
 encoder_imgs
+
+# patrick edits
+# ide files
+.idea/

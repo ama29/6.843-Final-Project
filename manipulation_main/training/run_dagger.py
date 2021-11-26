@@ -5,19 +5,25 @@ import os.path
 import gym
 import stable_baselines as sb
 from gym.wrappers import Monitor
+from imitation.algorithms.bc import BC
 from imitation.algorithms.dagger import SimpleDAggerTrainer
 from stable_baselines.common.vec_env import DummyVecEnv
+from stable_baselines3.sac import CnnPolicy
 
 from manipulation_main.common import io_utils
+from manipulation_main.training.custom_obs_policy import TransposeNatureCNN
 from manipulation_main.training.wrapper import TimeFeatureWrapper
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
+BASE_DIR = os.path.join(SCRIPT_DIR, "..", "..")
+
 
 def get_env_expert(args):
-    config = io_utils.load_yaml(args.config)
-    os.mkdir(args.model_dir)
+    config_dir = os.path.join(BASE_DIR, args.config)
+    config = io_utils.load_yaml(config_dir)
+    # os.mkdir(args.model_dir)
     # Folder for best models
-    os.mkdir(args.model_dir + "/best_model")
+    # os.mkdir(args.model_dir + "/best_model")
     model_dir = args.model_dir
     algo = args.algo
 
@@ -41,24 +47,41 @@ def get_env_expert(args):
     if args.timefeature:
         env = DummyVecEnv([lambda: TimeFeatureWrapper(gym.make('gripper-env-v0', config=config))])
     else:
+        # force = true to overwrite
         env = DummyVecEnv(
-            [lambda: Monitor(gym.make('gripper-env-v0', config=config), os.path.join(model_dir, "log_file"))])
+            [lambda: Monitor(gym.make('gripper-env-v0', config=config), os.path.join(model_dir, "dagger", "log_file"),
+                             force=True)])
 
-    agent = sb.SAC.load(os.path.join(SCRIPT_DIR, config["model_path"]))
+    agent = sb.SAC.load(os.path.join(BASE_DIR, args.model))
     return env, agent
 
 
 def main(args):
+    os.chdir(BASE_DIR)  # all filepaths are relative to repo root in other files
     env, expert = get_env_expert(args)
     scratch = os.path.join(os.path.join(SCRIPT_DIR, "..", "..", "trained_models", "dagger", args.model_dir))
-    trainer = SimpleDAggerTrainer(venv=env, scratch_dir=scratch, expert_policy=expert)
+
+    # define policy to be learned
+    ob_space = env.observation_space
+    ac_space = env.action_space
+    # Default network arch is nature, which is also used in this repo. Might be good to verify later arch matches
+    # TODO: is lr_schedule used? For now using constant lr scheduler
+    train_policy = CnnPolicy(observation_space=ob_space, action_space=ac_space, lr_schedule=lambda x: 0.005,
+                             features_extractor_class=TransposeNatureCNN)
+    bc_trainer = BC(observation_space=ob_space, action_space=ac_space, demonstrations=None, policy=train_policy)
+
+    # construct dagger instance and train
+    trainer = SimpleDAggerTrainer(venv=env, scratch_dir=scratch, expert_policy=expert, bc_trainer=bc_trainer)
     trainer.train(total_timesteps=args.num_timesteps)
+
 
 if __name__ == "__main__":
     train_parser = argparse.ArgumentParser()
     train_parser.add_argument('--config', type=str, required=True)
     train_parser.add_argument('--model_dir', type=str, required=True)
     train_parser.add_argument('--algo', type=str, required=True)
+    train_parser.add_argument('--model', type=str)
+    train_parser.add_argument("--num_timesteps", type=int)
 
     train_parser.add_argument('--timestep', type=str)
     train_parser.add_argument('-s', '--simple', action='store_true')

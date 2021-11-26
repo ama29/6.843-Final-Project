@@ -5,14 +5,14 @@ import numpy as np
 import functools
 import gym
 import collections
-from gym import spaces 
+from gym import spaces
 from enum import Enum
 
 from manipulation_main.common import io_utils
 from manipulation_main.common import transformations
 from manipulation_main.common import transform_utils
 from manipulation_main.gripperEnv import sensor, actuator
-from manipulation_main.simulation.simulation import World 
+from manipulation_main.simulation.simulation import World
 from manipulation_main.gripperEnv.rewards import Reward, SimplifiedReward, ShapedCustomReward
 from manipulation_main.gripperEnv.curriculum import WorkspaceCurriculum
 
@@ -46,7 +46,7 @@ class RobotEnv(World):
     def __init__(self, config, evaluate=False, test=False, validate=False):
         if not isinstance(config, dict):
             config = io_utils.load_yaml(config)
-        
+
         super().__init__(config, evaluate=evaluate, test=test, validate=validate)
         self._step_time = collections.deque(maxlen=10000)
         self.time_horizon = config['time_horizon']
@@ -75,7 +75,7 @@ class RobotEnv(World):
             self._reward_fn = SimplifiedReward(config['reward'], self)
         elif config['reward']['custom']:
             self._reward_fn = ShapedCustomReward(config['reward'], self)
-        else:    
+        else:
             self._reward_fn = Reward(config['reward'], self)
 
         # Assign the sensors
@@ -211,21 +211,25 @@ class RobotEnv(World):
             for sensor in self._sensors:
                 low = np.append(low, sensor.state_space.low)
                 high = np.append(high, sensor.state_space.high)
-            self.observation_space = gym.spaces.Box(low, high, dtype=np.float32)
+            # patrick edit: sb3 wants uint images
+            self.observation_space = gym.spaces.Box(low, high, dtype=np.uint8)
         else:
             shape = self._camera.state_space.shape
             if self._simplified:
+                # patrick edit: sb3 wants uint images
                 # Depth
                 # self.observation_space = self._camera.state_space
                 self.observation_space = gym.spaces.Box(low=0, high=255,
                                     shape=(shape[0], shape[1], 2))
             else:
                 if self.full_obs: # RGB + Depth + Actuator
+                    # patrick edit: sb3 wants uint images
                     self.observation_space = gym.spaces.Box(low=0, high=255,
-                                                        shape=(shape[0], shape[1], 5))
+                                                        shape=(shape[0], shape[1], 5), dtype=np.uint8)
                 else: # Depth + Actuator obs
+                    # patrick edit: sb3 wants uint images
                     self.observation_space = gym.spaces.Box(low=0, high=255,
-                                                        shape=(shape[0], shape[1], 2))
+                                                        shape=(shape[0], shape[1], 2), dtype=np.uint8)
 
     def reset_robot_pose(self, target_pos, target_orn):
         """ Reset the world coordination of the robot base. Useful for test purposes """
@@ -245,7 +249,7 @@ class RobotEnv(World):
 
         for i, joint in enumerate(self.main_joints):
             self._joints[joint].set_position(comp_pos[i])
-        
+
         self.run(0.1)
 
     def relative_pose(self, translation, yaw_rotation):
@@ -284,7 +288,7 @@ class RobotEnv(World):
                                self._workspace['lower'],
                                self._workspace['upper'])
         return position
-    
+
     def get_gripper_width(self):
         """Query the current opening width of the gripper."""
         left_finger_pos = 0.05 - self._left_finger.get_position()

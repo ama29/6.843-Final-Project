@@ -10,7 +10,7 @@ setup(
         'gym',
         'keras==2.2.4',
         'matplotlib',
-        'numpy==1.18',
+        'numpy',
         'opencv-contrib-python',
         'pandas',
         'pybullet==2.6.4',

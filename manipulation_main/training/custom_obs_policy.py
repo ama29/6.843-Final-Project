@@ -98,4 +98,5 @@ class TransposeNatureCNN(BaseFeaturesExtractor):
         self.linear = nn.Sequential(nn.Linear(n_flatten, features_dim), nn.ReLU())
 
     def forward(self, observations: torch.Tensor) -> torch.Tensor:
-        return self.linear(self.cnn(observations.permute((2, 0, 1)))) # patrick edit: same as init but pytorch ver
+        # permute from b x h x w x c to b x c x h x w
+        return self.linear(self.cnn(observations.permute((0, 3, 1, 2)))) # patrick edit: same as init but pytorch ver

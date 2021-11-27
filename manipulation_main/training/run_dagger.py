@@ -7,8 +7,9 @@ import stable_baselines as sb
 from gym.wrappers import Monitor
 from imitation.algorithms.bc import BC
 from imitation.algorithms.dagger import SimpleDAggerTrainer
+from imitation.util import logger
 from stable_baselines.common.vec_env import DummyVecEnv
-from stable_baselines3.sac import CnnPolicy
+from stable_baselines3.common.policies import ActorCriticCnnPolicy
 
 from manipulation_main.common import io_utils
 from manipulation_main.training.custom_obs_policy import TransposeNatureCNN
@@ -49,7 +50,8 @@ def get_env_expert(args):
     else:
         # force = true to overwrite
         env = DummyVecEnv(
-            [lambda: Monitor(gym.make('gripper-env-v0', config=config), os.path.join(model_dir, "dagger", "log_file"),
+            [lambda: Monitor(gym.make('gripper-env-v0', config=config),
+                             os.path.join(model_dir, "dagger", "gym_log_file"),
                              force=True)])
 
     agent = sb.SAC.load(os.path.join(BASE_DIR, args.model))
@@ -66,13 +68,17 @@ def main(args):
     ac_space = env.action_space
     # Default network arch is nature, which is also used in this repo. Might be good to verify later arch matches
     # TODO: is lr_schedule used? For now using constant lr scheduler
-    train_policy = CnnPolicy(observation_space=ob_space, action_space=ac_space, lr_schedule=lambda x: 0.005,
-                             features_extractor_class=TransposeNatureCNN)
+    train_policy = ActorCriticCnnPolicy(observation_space=ob_space, action_space=ac_space, lr_schedule=lambda x: 0.005,
+                                        features_extractor_class=TransposeNatureCNN)
+    log_dir = os.path.join(BASE_DIR, args.model_dir, "dagger", "logs")
     bc_trainer = BC(observation_space=ob_space, action_space=ac_space, demonstrations=None, policy=train_policy)
 
     # construct dagger instance and train
-    trainer = SimpleDAggerTrainer(venv=env, scratch_dir=scratch, expert_policy=expert, bc_trainer=bc_trainer)
-    trainer.train(total_timesteps=args.num_timesteps)
+    dagger_logger = logger.configure(log_dir)
+    trainer = SimpleDAggerTrainer(venv=env, scratch_dir=scratch, expert_policy=expert, bc_trainer=bc_trainer,
+                                  custom_logger=dagger_logger)
+    trainer.train(total_timesteps=args.num_timesteps, rollout_round_min_timesteps=100)
+    trainer.save_trainer()
 
 
 if __name__ == "__main__":

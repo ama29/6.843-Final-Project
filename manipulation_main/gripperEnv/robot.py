@@ -225,11 +225,11 @@ class RobotEnv(World):
                 if self.full_obs: # RGB + Depth + Actuator
                     # patrick edit: sb3 wants uint images
                     self.observation_space = gym.spaces.Box(low=0, high=255,
-                                                        shape=(shape[0], shape[1], 5), dtype=np.uint8)
+                                                        shape=(shape[0], shape[1], 5))
                 else: # Depth + Actuator obs
                     # patrick edit: sb3 wants uint images
                     self.observation_space = gym.spaces.Box(low=0, high=255,
-                                                        shape=(shape[0], shape[1], 2), dtype=np.uint8)
+                                                        shape=(shape[0], shape[1], 2))
 
     def reset_robot_pose(self, target_pos, target_orn):
         """ Reset the world coordination of the robot base. Useful for test purposes """

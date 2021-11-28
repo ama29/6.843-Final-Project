@@ -50,3 +50,10 @@ def get_env_expert(args):
 
     agent = sb.SAC.load(os.path.join(BASE_DIR, args.model))
     return env, agent
+
+
+def get_test_env(args):
+    config_dir = os.path.join(BASE_DIR, args.config)
+    config = io_utils.load_yaml(config_dir)
+    task = DummyVecEnv([lambda: gym.make('gripper-env-v0', config=config, evaluate=True, test=False)])
+    return task

@@ -20,7 +20,7 @@ def rollout_expert_traj(save_path: str, expert, env, min_timesteps: int, min_epi
         min_episodes
     )
     # set unwrap to false otherwise wrapper fails to see info within trajectory
-    rollout.rollout_and_save(save_path, expert, env, sample_until, unwrap=False)
+    rollout.rollout_and_save(save_path, expert, env, sample_until, unwrap=False, deterministic_policy=True)
 
 
 def main(args):

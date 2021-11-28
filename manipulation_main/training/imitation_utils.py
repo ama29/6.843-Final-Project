@@ -5,6 +5,7 @@ import gym
 import stable_baselines as sb
 from gym.wrappers import Monitor
 from stable_baselines.common.vec_env import DummyVecEnv
+from stable_baselines3.common.vec_env import VecNormalize
 
 from manipulation_main.common import io_utils
 from manipulation_main.training.wrapper import TimeFeatureWrapper
@@ -48,6 +49,10 @@ def get_env_expert(args):
                              os.path.join(model_dir, "dagger", "gym_log_file"),
                              force=True)])
 
+    # expert policy needs obs to be normalized with existing normaliztion constants
+    env = VecNormalize(env, training=False, norm_obs=True, norm_reward=False,
+                        clip_obs=10.)
+    env = VecNormalize.load(os.path.join(args.model_dir, "best_model", 'vecnormalize.pkl'), env)
     agent = sb.SAC.load(os.path.join(BASE_DIR, args.model))
     return env, agent
 
@@ -56,4 +61,7 @@ def get_test_env(args):
     config_dir = os.path.join(BASE_DIR, args.config)
     config = io_utils.load_yaml(config_dir)
     task = DummyVecEnv([lambda: gym.make('gripper-env-v0', config=config, evaluate=True, test=False)])
+    task = VecNormalize(task, training=False, norm_obs=True, norm_reward=True,
+                        clip_obs=10.)
+    task = VecNormalize.load(os.path.join(args.model_dir, "best_model", 'vecnormalize.pkl'), task)
     return task

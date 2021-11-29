@@ -29,6 +29,7 @@ def main(args):
     # construct dagger instance and train
     dagger_logger = logger.configure(log_dir)
     save_dir = os.path.join(dagger_dir, "dagger_model")
+    bc_train_args = {"log_rollouts_n_episodes" : args.test_rollouts}
     trainer = SimpleDAggerTrainer(venv=env, scratch_dir=save_dir, expert_policy=expert, bc_trainer=bc_trainer,
                                   custom_logger=dagger_logger)
     trainer.train(total_timesteps=args.num_timesteps, rollout_round_min_timesteps=100)
@@ -43,6 +44,8 @@ if __name__ == "__main__":
     train_parser.add_argument('--algo', type=str, required=True)
     train_parser.add_argument('--model', type=str)
     train_parser.add_argument("--num_timesteps", type=int)
+    train_parser.add_argument("--test_rollouts", type=int, default=20)
+    train_parser.add_argument("--round_episodes", type=int, default=20)
 
     train_parser.add_argument('--timestep', type=str)
     train_parser.add_argument('-s', '--simple', action='store_true')

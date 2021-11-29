@@ -110,5 +110,5 @@ if __name__ == "__main__":
     train_parser.add_argument('-v', '--visualize', action='store_true')
     train_parser.add_argument('-tf', '--timefeature', action='store_true')
     args = train_parser.parse_args()
-    run_bc_range(args, 50, 1000, 100)
-    # print(run_one_bc(args))
+    # run_bc_range(args, 50, 1000, 100)
+    print(run_one_bc(args))

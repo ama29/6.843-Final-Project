@@ -31,7 +31,7 @@ def main(args):
     save_dir = os.path.join(dagger_dir, "dagger_model")
     bc_train_args = {"log_rollouts_n_episodes" : args.test_rollouts}
     trainer = SimpleDAggerTrainer(venv=env, scratch_dir=save_dir, expert_policy=expert, bc_trainer=bc_trainer,
-                                  custom_logger=dagger_logger)
+                                  custom_logger=dagger_logger, bc_train_args=bc_train_args)
     trainer.train(total_timesteps=args.num_timesteps, rollout_round_min_timesteps=100)
 
     trainer.save_policy(os.path.join(dagger_dir, "final_policy.pt"))

@@ -1,0 +1,26 @@
+--------------------------------
+| bc/               |          |
+|    batch_num      | 1        |
+|    ent_loss       | -0.00709 |
+|    entropy        | 7.09     |
+|    epoch_num      | 0        |
+|    l2_loss        | 0        |
+|    l2_norm        | 929      |
+|    loss           | 6.1      |
+|    neglogp        | 6.11     |
+|    prob_true_act  | 0.00241  |
+|    samples_so_far | 32       |
+--------------------------------
+--------------------------------
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | -0.00459 |
+|    entropy        | 4.59     |
+|    epoch_num      | 2        |
+|    l2_loss        | 0        |
+|    l2_norm        | 1.14e+03 |
+|    loss           | 3.15     |
+|    neglogp        | 3.15     |
+|    prob_true_act  | 0.0626   |
+|    samples_so_far | 16032    |
+--------------------------------

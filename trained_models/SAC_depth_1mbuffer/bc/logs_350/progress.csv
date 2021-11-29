@@ -1,0 +1,2 @@
+bc/loss,bc/neglogp,bc/ent_loss,bc/epoch_num,bc/l2_loss,bc/batch_num,bc/entropy,bc/prob_true_act,bc/l2_norm,bc/samples_so_far
+5.944796562194824,5.9518914222717285,-0.007094692438840866,0,0.0,1,7.094692230224609,0.0027016224339604378,928.500244140625,32

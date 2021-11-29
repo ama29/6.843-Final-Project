@@ -33,7 +33,7 @@ def main(args):
                                   custom_logger=dagger_logger)
     trainer.train(total_timesteps=args.num_timesteps, rollout_round_min_timesteps=100)
 
-    trainer.save_trainer()
+    trainer.save_policy(os.path.join(dagger_dir, "final_policy.pt"))
 
 
 if __name__ == "__main__":

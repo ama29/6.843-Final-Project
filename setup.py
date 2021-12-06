@@ -23,5 +23,6 @@ setup(
         'paramiko',
         "h5py<3.0.0",
         "numba",
+        "vit-pytorch"
     ],
 )

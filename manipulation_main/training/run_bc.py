@@ -22,7 +22,8 @@ def rollout_expert_traj(save_path: str, expert, env, min_timesteps: int, min_epi
         min_episodes
     )
     # set unwrap to false otherwise wrapper fails to see info within trajectory
-    rollout.rollout_and_save(save_path, expert, env, sample_until, unwrap=False, deterministic_policy=True)
+    rollout.rollout_and_save(save_path, expert, env, sample_until, unwrap=False, deterministic_policy=True,
+                             exclude_infos=False)
 
 
 def run_one_bc(args):
@@ -72,15 +73,16 @@ def run_one_bc(args):
         test_stats = train.eval_policy(bc_policy, test_env, n_episodes_eval=args.num_test_episodes)
         return train_stats, test_stats
 
+
 def run_bc_range(args, min_traj: int, max_traj: int, step: int):
     all_results = []
 
-    for num_traj in range(min_traj, max_traj+1, step): # want to use up to max_traj inclusive
+    for num_traj in range(min_traj, max_traj + 1, step):  # want to use up to max_traj inclusive
         sub_args = copy.deepcopy(args)
         sub_args.max_expert_demos = num_traj
         sub_args.log_dir = str(num_traj)
         train_res, test_res = run_one_bc(sub_args)
-        train_appended = {"train_"+k: v for k,v in train_res.items()}
+        train_appended = {"train_" + k: v for k, v in train_res.items()}
         test_appended = {"test_" + k: v for k, v in test_res.items()}
         train_appended.update(test_appended)
         train_appended["num_expert_demos"] = num_traj

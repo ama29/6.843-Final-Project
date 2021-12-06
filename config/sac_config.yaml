@@ -33,14 +33,15 @@ SAC:
 TRPO: {batch_size: 64, max_iters: 400, save_dir: trpo_1m, step_size: 0.001, tensorboard_logs: tensorboard_logs/trpo_1m,
   total_timesteps: 5000000}
 algorithm: sac
+# patrick edit: remove curriculum
 curriculum:
-  extent: [0.01, 0.1]
+  extent: [0.1, 0.101]
   init_lambda: 0.0
-  lift_dist: [0.01, 0.1]
-  max_objects: [3, 5]
+  lift_dist: [0.1, 0.101]
+  max_objects: [4, 5]
   min_objects: [1, 1]
   n_steps: 8
-  robot_height: [0.15, 0.25]
+  robot_height: [0.25, 0.26]
   success_threshold: 0.7
   window_size: 1000
 depth_observation: true

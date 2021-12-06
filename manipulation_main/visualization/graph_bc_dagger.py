@@ -24,6 +24,10 @@ def graph_bc_dagger(bc_log_path: str, dagger_log_path: str):
     plt.legend(combined_df.columns)
     plt.show()
 
+def graph_env_interactions(bc_log_path: str, dagger_log_path: str, rl_log_path: str):
+    # TODO: have bc count number of timesteps, not just expert trajectories
+    pass
+
 if __name__ == "__main__":
     bc_log_path = os.path.join(BASE_DIR, "trained_models", "SAC_depth_1mbuffer", "bc", "all_logs.csv")
     dagger_log_path = os.path.join(BASE_DIR, "trained_models", "SAC_depth_1mbuffer", "dagger", "logs", "progress.csv")

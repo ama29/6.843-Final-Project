@@ -2,11 +2,12 @@ import gym
 import numpy as np
 import tensorflow as tf
 import torch
-
+from einops import repeat
+from gym.spaces import Box
 from stable_baselines.common.tf_layers import conv, linear, conv_to_fc
-from stable_baselines3.common.preprocessing import is_image_space
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
 from torch import nn
+from vit_pytorch import ViT
 
 
 def create_augmented_nature_cnn(num_direct_features):
@@ -69,7 +70,7 @@ class TransposeNatureCNN(BaseFeaturesExtractor):
     def __init__(self, observation_space: gym.spaces.Box, features_dim: int = 512):
         super(TransposeNatureCNN, self).__init__(observation_space, features_dim)
         # TODO: check for image valid removed because want float image
-        n_input_channels = observation_space.shape[2] # patrick edit: channels last in obs, used to be 0
+        n_input_channels = observation_space.shape[2]  # patrick edit: channels last in obs, used to be 0
         self.cnn = nn.Sequential(
             nn.Conv2d(n_input_channels, 32, kernel_size=8, stride=4, padding=0),
             nn.ReLU(),
@@ -90,4 +91,54 @@ class TransposeNatureCNN(BaseFeaturesExtractor):
 
     def forward(self, observations: torch.Tensor) -> torch.Tensor:
         # permute from b x h x w x c to b x c x h x w
-        return self.linear(self.cnn(observations.permute((0, 3, 1, 2)))) # patrick edit: same as init but pytorch ver
+        return self.linear(self.cnn(observations.permute((0, 3, 1, 2))))  # patrick edit: same as init but pytorch ver
+
+
+# want vit without final linear layer
+class ViTNoClass(ViT):
+    def forward(self, img):
+        # copied from vit, removed final mlp call
+        x = self.to_patch_embedding(img)
+        b, n, _ = x.shape
+
+        cls_tokens = repeat(self.cls_token, '() n d -> b n d', b=b)
+        x = torch.cat((cls_tokens, x), dim=1)
+        x += self.pos_embedding[:, :(n + 1)]
+        x = self.dropout(x)
+
+        x = self.transformer(x)
+
+        x = x.mean(dim=1) if self.pool == 'mean' else x[:, 0]
+
+        x = self.to_latent(x)
+        return x
+        # return self.mlp_head(x)
+
+
+# patrick: alternate model class, visual transformer
+class TransposedVisTransformer(BaseFeaturesExtractor):
+    def __init__(self, observation_space: gym.spaces.Box, features_dim: int = 512):
+        super().__init__(observation_space, features_dim)
+        self.vit = ViTNoClass(
+            image_size=64,
+            patch_size=4,
+            num_classes=5,
+            dim=512,
+            depth=3,
+            heads=5,
+            mlp_dim=features_dim,
+            dropout=0.1,
+            emb_dropout=0.1,
+            channels=2
+        )
+
+    def forward(self, observations: torch.Tensor) -> torch.Tensor:
+        # permute from b x h x w x c to b x c x h x w
+        return self.vit(observations.permute((0, 3, 1, 2)))  # patrick edit: same as init but pytorch ver
+
+
+if __name__ == "__main__":
+    test = TransposedVisTransformer(Box(0, 1, (1, 2)))
+    img = torch.randn(1, 64, 64, 2)
+
+    preds = test(img)  # (1, 1000)

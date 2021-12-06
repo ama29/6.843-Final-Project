@@ -5,6 +5,8 @@ import gym
 
 import numpy as np
 import stable_baselines as sb
+from imitation.algorithms.bc import reconstruct_policy
+
 import sb_helper
 import tensorflow as tf
 import manipulation_main
@@ -91,19 +93,23 @@ def run(args):
         task = VecNormalize.load(os.path.join(top_folder_str, 'vecnormalize.pkl'), task)
         
     # task = gym.make('gripper-env-v0', config=config, evaluate=True, test=args.test)
-    model_lower = args.model.lower() 
-    if 'trpo' == config["algorithm"]: 
-        agent = sb.TRPO.load(args.model)
-    elif 'sac' == config["algorithm"]:
-        agent = sb.SAC.load(args.model)
-    elif 'ppo' == config["algorithm"]:
-        agent = sb.PPO2.load(args.model)
-    elif 'dqn' == config["algorithm"]:
-        agent = sb.DQN.load(args.model)
-    elif 'bdq' == config["algorithm"]:
-        agent = sb.BDQ.load(args.model)
+    model_lower = args.model.lower()
+    # Patrick edit: enable loading sb3
+    if args.model.endswith(".zip"):
+        if 'trpo' == config["algorithm"]:
+            agent = sb.TRPO.load(args.model)
+        elif 'sac' == config["algorithm"]:
+            agent = sb.SAC.load(args.model)
+        elif 'ppo' == config["algorithm"]:
+            agent = sb.PPO2.load(args.model)
+        elif 'dqn' == config["algorithm"]:
+            agent = sb.DQN.load(args.model)
+        elif 'bdq' == config["algorithm"]:
+            agent = sb.BDQ.load(args.model)
+        else:
+            raise Exception
     else:
-        raise Exception
+        agent = reconstruct_policy(args.model)
     print("Run the agent")
     run_agent(task, agent, args.stochastic)
     task.close()

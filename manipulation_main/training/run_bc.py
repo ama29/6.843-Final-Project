@@ -10,7 +10,7 @@ from imitation.scripts.common.demonstrations import load_expert_trajs
 from imitation.util import logger
 from stable_baselines3.common.policies import ActorCriticCnnPolicy
 
-from manipulation_main.training.custom_obs_policy import TransposeNatureCNN
+from manipulation_main.training.custom_obs_policy import TransposeNatureCNN, TransposedVisTransformer
 from manipulation_main.training.imitation_utils import BASE_DIR, get_env_expert, get_test_env
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -37,8 +37,9 @@ def run_one_bc(args):
     ac_space = train_env.action_space
     # Default network arch is nature, which is also used in this repo. Might be good to verify later arch matches
     # TODO: is lr_schedule used? For now using constant lr scheduler
+    feat_cls = TransposedVisTransformer if args.use_transformer else TransposeNatureCNN
     train_policy = ActorCriticCnnPolicy(observation_space=ob_space, action_space=ac_space, lr_schedule=lambda x: 0.005,
-                                        features_extractor_class=TransposeNatureCNN)
+                                        features_extractor_class=feat_cls)
 
     # load/create rollouts
     rollout_file = os.path.join(BASE_DIR, args.rollout_file)
@@ -105,6 +106,7 @@ if __name__ == "__main__":
     train_parser.add_argument("--num_test_episodes", type=int, default=None)
     train_parser.add_argument("--log_dir", type=str, default=None)
     train_parser.add_argument("--max_expert_demos", type=str, default=None)
+    train_parser.add_argument("--use_transformer", action="store_true")
 
     train_parser.add_argument('--timestep', type=str)
     train_parser.add_argument('-s', '--simple', action='store_true')

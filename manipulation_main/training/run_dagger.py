@@ -6,7 +6,7 @@ from imitation.algorithms.dagger import SimpleDAggerTrainer
 from imitation.util import logger
 from stable_baselines3.common.policies import ActorCriticCnnPolicy
 
-from manipulation_main.training.custom_obs_policy import TransposeNatureCNN
+from manipulation_main.training.custom_obs_policy import TransposeNatureCNN, TransposedVisTransformer
 from manipulation_main.training.imitation_utils import BASE_DIR, get_env_expert
 
 
@@ -21,15 +21,16 @@ def main(args):
     ac_space = env.action_space
     # Default network arch is nature, which is also used in this repo. Might be good to verify later arch matches
     # TODO: is lr_schedule used? For now using constant lr scheduler
+    feat_cls = TransposedVisTransformer if args.use_transformer else TransposeNatureCNN
     train_policy = ActorCriticCnnPolicy(observation_space=ob_space, action_space=ac_space, lr_schedule=lambda x: 0.005,
-                                        features_extractor_class=TransposeNatureCNN)
+                                        features_extractor_class=feat_cls)
     log_dir = os.path.join(dagger_dir, "logs")
     bc_trainer = BC(observation_space=ob_space, action_space=ac_space, demonstrations=None, policy=train_policy)
 
     # construct dagger instance and train
     dagger_logger = logger.configure(log_dir)
     save_dir = os.path.join(dagger_dir, "dagger_model")
-    bc_train_args = {"log_rollouts_n_episodes" : args.test_rollouts}
+    bc_train_args = {"log_rollouts_n_episodes": args.test_rollouts}
     trainer = SimpleDAggerTrainer(venv=env, scratch_dir=save_dir, expert_policy=expert, bc_trainer=bc_trainer,
                                   custom_logger=dagger_logger, bc_train_args=bc_train_args)
     trainer.train(total_timesteps=args.num_timesteps, rollout_round_min_timesteps=100)
@@ -46,6 +47,7 @@ if __name__ == "__main__":
     train_parser.add_argument("--num_timesteps", type=int)
     train_parser.add_argument("--test_rollouts", type=int, default=20)
     train_parser.add_argument("--round_episodes", type=int, default=20)
+    train_parser.add_argument("--use_transformer", action="store_true")
 
     train_parser.add_argument('--timestep', type=str)
     train_parser.add_argument('-s', '--simple', action='store_true')

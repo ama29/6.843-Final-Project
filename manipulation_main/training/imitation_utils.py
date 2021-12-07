@@ -51,9 +51,9 @@ def get_env_expert(args):
 
     # expert policy needs obs to be normalized with existing normaliztion constants
     env = VecNormalize(env, training=False, norm_obs=True, norm_reward=False,
-                        clip_obs=10., clip_reward=10000)
+                       clip_obs=10., clip_reward=10000)
     env = VecNormalize.load(os.path.join(args.model_dir, "best_model", 'vecnormalize.pkl'), env)
-    env.norm_reward = False
+    env.norm_reward = False  # don't normalize reward for logging since bc doesn't use it
     agent = sb.SAC.load(os.path.join(BASE_DIR, args.model))
     return env, agent
 

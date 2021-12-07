@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -o run_bc_cnn.log-%j
+#SBATCH -o generate_trajectories.log-%j
 #SBATCH -c 20
 
 # load modules

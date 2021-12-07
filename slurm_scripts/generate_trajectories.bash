@@ -6,7 +6,7 @@
 # load modules
 source /etc/profile
 module load anaconda/2020a
-module load cuda/10.2
+module load cuda/10.0
 
 eval "$(conda shell.bash hook)"
 conda activate tf_grasp_env_workaround

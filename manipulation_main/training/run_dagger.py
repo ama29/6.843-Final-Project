@@ -25,15 +25,18 @@ def main(args):
     train_policy = ActorCriticCnnPolicy(observation_space=ob_space, action_space=ac_space, lr_schedule=lambda x: 0.005,
                                         features_extractor_class=feat_cls)
     log_dir = os.path.join(dagger_dir, "logs")
-    bc_trainer = BC(observation_space=ob_space, action_space=ac_space, demonstrations=None, policy=train_policy)
+    bc_trainer = BC(observation_space=ob_space, action_space=ac_space, demonstrations=None, policy=train_policy,
+                    batch_size=128)
 
     # construct dagger instance and train
     dagger_logger = logger.configure(log_dir)
     save_dir = os.path.join(dagger_dir, "dagger_model")
-    bc_train_args = {"log_rollouts_n_episodes": args.test_rollouts, "batch_size": 128}
     trainer = SimpleDAggerTrainer(venv=env, scratch_dir=save_dir, expert_policy=expert, bc_trainer=bc_trainer,
-                                  custom_logger=dagger_logger, bc_train_args=bc_train_args)
-    trainer.train(total_timesteps=args.num_timesteps, rollout_round_min_timesteps=100)
+                                  custom_logger=dagger_logger)
+
+    bc_train_kwargs = {"log_rollouts_n_episodes": args.test_rollouts, "n_epochs": 4}
+    trainer.train(total_timesteps=args.num_timesteps, rollout_round_min_timesteps=args.round_episodes,
+                  bc_train_kwargs=bc_train_kwargs)
 
     trainer.save_policy(os.path.join(dagger_dir, "final_policy.pt"))
 

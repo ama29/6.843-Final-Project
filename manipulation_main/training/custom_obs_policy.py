@@ -121,12 +121,12 @@ class TransposedVisTransformer(BaseFeaturesExtractor):
         super().__init__(observation_space, features_dim)
         self.vit = ViTNoClass(
             image_size=64,
-            patch_size=4,
+            patch_size=8,
             num_classes=5,
             dim=512,
             depth=3,
             heads=5,
-            mlp_dim=features_dim,
+            mlp_dim=features_dim*2,
             dropout=0.1,
             emb_dropout=0.1,
             channels=2

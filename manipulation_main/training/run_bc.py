@@ -56,9 +56,10 @@ def run_one_bc(args):
     demos = load_expert_trajs(rollout_file, n_expert_demos=args.max_expert_demos)
 
     log_dir = os.path.join(bc_dir, f"logs_{args.log_dir if args.log_dir is not None else ''}")
+    batch_size = min(128, args.max_expert_demos if args.max_expert_demos is not None else float("inf"))
     bc_logger = logger.configure(log_dir)
     bc_trainer = BC(observation_space=ob_space, action_space=ac_space, demonstrations=demos, policy=train_policy,
-                    custom_logger=bc_logger)
+                    custom_logger=bc_logger, batch_size=batch_size)
 
     # train bc
     print("Training policy on bc")
@@ -81,7 +82,7 @@ def run_bc_range(args, min_traj: int, max_traj: int, step: int):
     for num_traj in range(min_traj, max_traj + 1, step):  # want to use up to max_traj inclusive
         sub_args = copy.deepcopy(args)
         sub_args.max_expert_demos = num_traj
-        sub_args.log_dir = str(num_traj)
+        sub_args.log_dir += str(num_traj)
         train_res, test_res = run_one_bc(sub_args)
         train_appended = {"train_" + k: v for k, v in train_res.items()}
         test_appended = {"test_" + k: v for k, v in test_res.items()}
@@ -90,7 +91,7 @@ def run_bc_range(args, min_traj: int, max_traj: int, step: int):
         all_results.append(train_appended)
 
     df = pd.DataFrame(all_results)
-    df.to_csv(os.path.join(BASE_DIR, args.model_dir, "bc", "all_logs.csv"))
+    df.to_csv(os.path.join(BASE_DIR, args.model_dir, "bc", f"{args.log_dir}_all_logs.csv"))
 
 
 if __name__ == "__main__":
@@ -105,8 +106,12 @@ if __name__ == "__main__":
     train_parser.add_argument("--num_epochs", type=int, default=1)
     train_parser.add_argument("--num_test_episodes", type=int, default=None)
     train_parser.add_argument("--log_dir", type=str, default=None)
-    train_parser.add_argument("--max_expert_demos", type=str, default=None)
+    train_parser.add_argument("--max_expert_demos", type=int, default=None)
     train_parser.add_argument("--use_transformer", action="store_true")
+    train_parser.add_argument("--run_range", action="store_true")
+    train_parser.add_argument("--range_min", type=int, default=None)
+    train_parser.add_argument("--range_max", type=int, default=None)
+    train_parser.add_argument("--range_step", type=int, default=None)
 
     train_parser.add_argument('--timestep', type=str)
     train_parser.add_argument('-s', '--simple', action='store_true')
@@ -114,5 +119,7 @@ if __name__ == "__main__":
     train_parser.add_argument('-v', '--visualize', action='store_true')
     train_parser.add_argument('-tf', '--timefeature', action='store_true')
     args = train_parser.parse_args()
-    # run_bc_range(args, 50, 1000, 100)
-    print(run_one_bc(args))
+    if args.run_range:
+        run_bc_range(args, min_traj=args.range_min, max_traj=args.range_max, step=args.range_step)
+    else:
+        print(run_one_bc(args))

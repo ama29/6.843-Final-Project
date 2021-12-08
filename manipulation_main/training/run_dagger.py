@@ -36,7 +36,7 @@ def main(args):
 
     bc_train_kwargs = {"log_rollouts_n_episodes": args.test_rollouts, "n_epochs": 4}
     trainer.train(total_timesteps=args.num_timesteps, rollout_round_min_timesteps=args.round_episodes,
-                  bc_train_kwargs=bc_train_kwargs)
+                  bc_train_kwargs=bc_train_kwargs, replace_only_on_failure=args.expert_on_fail)
 
     trainer.save_policy(os.path.join(dagger_dir, "final_policy.pt"))
 
@@ -51,6 +51,7 @@ if __name__ == "__main__":
     train_parser.add_argument("--test_rollouts", type=int, default=20)
     train_parser.add_argument("--round_episodes", type=int, default=20)
     train_parser.add_argument("--use_transformer", action="store_true")
+    train_parser.add_argument("--expert_on_fail", action="store_true")
 
     train_parser.add_argument('--timestep', type=str)
     train_parser.add_argument('-s', '--simple', action='store_true')

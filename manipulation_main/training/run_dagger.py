@@ -12,7 +12,7 @@ from manipulation_main.training.imitation_utils import BASE_DIR, get_env_expert
 
 def main(args):
     os.chdir(BASE_DIR)  # all filepaths are relative to repo root in other files
-    dagger_dir = os.path.join(BASE_DIR, args.model_dir, "dagger")
+    dagger_dir = os.path.join(BASE_DIR, args.model_dir, "dagger", args.log_dir)
 
     env, expert = get_env_expert(args)
 
@@ -24,7 +24,7 @@ def main(args):
     feat_cls = TransposedVisTransformer if args.use_transformer else TransposeNatureCNN
     train_policy = ActorCriticCnnPolicy(observation_space=ob_space, action_space=ac_space, lr_schedule=lambda x: 0.005,
                                         features_extractor_class=feat_cls)
-    log_dir = os.path.join(dagger_dir, "logs")
+    log_dir = os.path.join(dagger_dir, f"logs")
     bc_trainer = BC(observation_space=ob_space, action_space=ac_space, demonstrations=None, policy=train_policy,
                     batch_size=128)
 
@@ -52,6 +52,7 @@ if __name__ == "__main__":
     train_parser.add_argument("--round_episodes", type=int, default=20)
     train_parser.add_argument("--use_transformer", action="store_true")
     train_parser.add_argument("--expert_on_fail", action="store_true")
+    train_parser.add_argument("--log_dir", type=str, default="")
 
     train_parser.add_argument('--timestep', type=str)
     train_parser.add_argument('-s', '--simple', action='store_true')

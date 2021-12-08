@@ -2,6 +2,7 @@ import argparse
 import copy
 import os.path
 
+import numpy as np
 import pandas as pd
 from imitation.algorithms.bc import BC
 from imitation.data import rollout

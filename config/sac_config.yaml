@@ -63,4 +63,4 @@ simplified: false
 simulation: {real_time: false, visualize: false}
 skip_empty_initial_state: true
 # patrick edit: avoid waiting long time for trajs
-time_horizon: 150
+time_horizon: 50

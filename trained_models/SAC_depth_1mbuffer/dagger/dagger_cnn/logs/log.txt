@@ -153,3 +153,2425 @@
 |    success_min          | 0         |
 |    success_std          | 0.218     |
 ---------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | -0.00645  |
+|    entropy              | 6.45      |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 995       |
+|    loss                 | 4.11      |
+|    neglogp              | 4.12      |
+|    prob_true_act        | 0.0167    |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 6.13e+03  |
+|    mean_episode_success | 1         |
+|    round_episode_count  | 5         |
+|    round_num            | 5         |
+|    round_timestep_count | 128       |
+|    total_expert_count   | 646       |
+|    total_timesteps      | 794       |
+| rollout/                |           |
+|    return_max           | 7.38e+03  |
+|    return_mean          | -3.96e+03 |
+|    return_min           | -1e+04    |
+|    return_std           | 7.3e+03   |
+|    success_max          | 1         |
+|    success_mean         | 0.35      |
+|    success_min          | 0         |
+|    success_std          | 0.477     |
+---------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | -0.00619 |
+|    entropy              | 6.19     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 1.02e+03 |
+|    loss                 | 3.84     |
+|    neglogp              | 3.85     |
+|    prob_true_act        | 0.0226   |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 6.33e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 6        |
+|    round_num            | 6        |
+|    round_timestep_count | 145      |
+|    total_expert_count   | 730      |
+|    total_timesteps      | 939      |
+| rollout/                |          |
+|    return_max           | 7.08e+03 |
+|    return_mean          | -766     |
+|    return_min           | -1e+04   |
+|    return_std           | 7.14e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.6      |
+|    success_min          | 0        |
+|    success_std          | 0.49     |
+--------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | -0.00589  |
+|    entropy              | 5.89      |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 1.04e+03  |
+|    loss                 | 3.56      |
+|    neglogp              | 3.57      |
+|    prob_true_act        | 0.0306    |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 4.5e+03   |
+|    mean_episode_success | 0.833     |
+|    round_episode_count  | 6         |
+|    round_num            | 7         |
+|    round_timestep_count | 146       |
+|    total_expert_count   | 801       |
+|    total_timesteps      | 1085      |
+| rollout/                |           |
+|    return_max           | 7.18e+03  |
+|    return_mean          | -2.62e+03 |
+|    return_min           | -1e+04    |
+|    return_std           | 7.07e+03  |
+|    success_max          | 1         |
+|    success_mean         | 0.45      |
+|    success_min          | 0         |
+|    success_std          | 0.497     |
+---------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | -0.00556 |
+|    entropy              | 5.56     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 1.07e+03 |
+|    loss                 | 3.14     |
+|    neglogp              | 3.14     |
+|    prob_true_act        | 0.0441   |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 6.75e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 7        |
+|    round_num            | 8        |
+|    round_timestep_count | 150      |
+|    total_expert_count   | 873      |
+|    total_timesteps      | 1235     |
+| rollout/                |          |
+|    return_max           | 7.69e+03 |
+|    return_mean          | 410      |
+|    return_min           | -1e+04   |
+|    return_std           | 7.28e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.65     |
+|    success_min          | 0        |
+|    success_std          | 0.477    |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | -0.00516 |
+|    entropy              | 5.16     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 1.11e+03 |
+|    loss                 | 2.87     |
+|    neglogp              | 2.87     |
+|    prob_true_act        | 0.0635   |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 6.38e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 7        |
+|    round_num            | 9        |
+|    round_timestep_count | 172      |
+|    total_expert_count   | 942      |
+|    total_timesteps      | 1407     |
+| rollout/                |          |
+|    return_max           | 7.78e+03 |
+|    return_mean          | 821      |
+|    return_min           | -1e+04   |
+|    return_std           | 7.24e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.65     |
+|    success_min          | 0        |
+|    success_std          | 0.477    |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | -0.00473 |
+|    entropy              | 4.73     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 1.15e+03 |
+|    loss                 | 2.29     |
+|    neglogp              | 2.3      |
+|    prob_true_act        | 0.102    |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.81e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 5        |
+|    round_num            | 10       |
+|    round_timestep_count | 133      |
+|    total_expert_count   | 985      |
+|    total_timesteps      | 1540     |
+| rollout/                |          |
+|    return_max           | 8.1e+03  |
+|    return_mean          | 3.31e+03 |
+|    return_min           | -1e+04   |
+|    return_std           | 6.3e+03  |
+|    success_max          | 1        |
+|    success_mean         | 0.8      |
+|    success_min          | 0        |
+|    success_std          | 0.4      |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | -0.00424 |
+|    entropy              | 4.24     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 1.19e+03 |
+|    loss                 | 1.92     |
+|    neglogp              | 1.93     |
+|    prob_true_act        | 0.16     |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.83e+03 |
+|    mean_episode_success | 0.875    |
+|    round_episode_count  | 8        |
+|    round_num            | 11       |
+|    round_timestep_count | 156      |
+|    total_expert_count   | 1028     |
+|    total_timesteps      | 1696     |
+| rollout/                |          |
+|    return_max           | 8.1e+03  |
+|    return_mean          | 4.46e+03 |
+|    return_min           | -1e+04   |
+|    return_std           | 4.71e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.9      |
+|    success_min          | 0        |
+|    success_std          | 0.3      |
+--------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | -0.00371  |
+|    entropy              | 3.71      |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 1.25e+03  |
+|    loss                 | 1.29      |
+|    neglogp              | 1.3       |
+|    prob_true_act        | 0.278     |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 7.32e+03  |
+|    mean_episode_success | 1         |
+|    round_episode_count  | 9         |
+|    round_num            | 12        |
+|    round_timestep_count | 164       |
+|    total_expert_count   | 1072      |
+|    total_timesteps      | 1860      |
+| rollout/                |           |
+|    return_max           | 8.57e+03  |
+|    return_mean          | 6.2e+03   |
+|    return_min           | -8.13e+03 |
+|    return_std           | 3.58e+03  |
+|    success_max          | 1         |
+|    success_mean         | 0.95      |
+|    success_min          | 0         |
+|    success_std          | 0.218     |
+---------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | -0.00314 |
+|    entropy              | 3.14     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 1.33e+03 |
+|    loss                 | 0.791    |
+|    neglogp              | 0.794    |
+|    prob_true_act        | 0.488    |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 6.24e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 6        |
+|    round_num            | 13       |
+|    round_timestep_count | 146      |
+|    total_expert_count   | 1095     |
+|    total_timesteps      | 2006     |
+| rollout/                |          |
+|    return_max           | 8.39e+03 |
+|    return_mean          | 5.64e+03 |
+|    return_min           | -9.9e+03 |
+|    return_std           | 3.86e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.95     |
+|    success_min          | 0        |
+|    success_std          | 0.218    |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | -0.00252 |
+|    entropy              | 2.52     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 1.41e+03 |
+|    loss                 | 0.279    |
+|    neglogp              | 0.282    |
+|    prob_true_act        | 0.908    |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.21e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 8        |
+|    round_num            | 14       |
+|    round_timestep_count | 156      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 2162     |
+| rollout/                |          |
+|    return_max           | 8.58e+03 |
+|    return_mean          | 6.34e+03 |
+|    return_min           | -1e+04   |
+|    return_std           | 3.93e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.95     |
+|    success_min          | 0        |
+|    success_std          | 0.218    |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | -0.00187 |
+|    entropy              | 1.87     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 1.52e+03 |
+|    loss                 | -0.457   |
+|    neglogp              | -0.455   |
+|    prob_true_act        | 1.68     |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.53e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 8        |
+|    round_num            | 15       |
+|    round_timestep_count | 137      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 2299     |
+| rollout/                |          |
+|    return_max           | 8.39e+03 |
+|    return_mean          | 6.73e+03 |
+|    return_min           | -1e+04   |
+|    return_std           | 3.99e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.95     |
+|    success_min          | 0        |
+|    success_std          | 0.218    |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | -0.00119 |
+|    entropy              | 1.19     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 1.6e+03  |
+|    loss                 | -0.986   |
+|    neglogp              | -0.985   |
+|    prob_true_act        | 3.4      |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 4.75e+03 |
+|    mean_episode_success | 0.857    |
+|    round_episode_count  | 7        |
+|    round_num            | 16       |
+|    round_timestep_count | 164      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 2463     |
+| rollout/                |          |
+|    return_max           | 8.5e+03  |
+|    return_mean          | 5.16e+03 |
+|    return_min           | -9.9e+03 |
+|    return_std           | 5.18e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.9      |
+|    success_min          | 0        |
+|    success_std          | 0.3      |
+--------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | -0.000465 |
+|    entropy              | 0.465     |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 1.69e+03  |
+|    loss                 | -1.32     |
+|    neglogp              | -1.32     |
+|    prob_true_act        | 6.29      |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 6.61e+03  |
+|    mean_episode_success | 1         |
+|    round_episode_count  | 6         |
+|    round_num            | 17        |
+|    round_timestep_count | 129       |
+|    total_expert_count   | 1106      |
+|    total_timesteps      | 2592      |
+| rollout/                |           |
+|    return_max           | 8.58e+03  |
+|    return_mean          | 7.61e+03  |
+|    return_min           | 3.48e+03  |
+|    return_std           | 1.37e+03  |
+|    success_max          | 1         |
+|    success_mean         | 1         |
+|    success_min          | 1         |
+|    success_std          | 0         |
+---------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.000263 |
+|    entropy              | -0.263   |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 1.84e+03 |
+|    loss                 | -1.98    |
+|    neglogp              | -1.98    |
+|    prob_true_act        | 14       |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.54e+03 |
+|    mean_episode_success | 0.875    |
+|    round_episode_count  | 8        |
+|    round_num            | 18       |
+|    round_timestep_count | 158      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 2750     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 6.08e+03 |
+|    return_min           | -1e+04   |
+|    return_std           | 5.38e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.9      |
+|    success_min          | 0        |
+|    success_std          | 0.3      |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00105  |
+|    entropy              | -1.05    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 1.94e+03 |
+|    loss                 | -2.96    |
+|    neglogp              | -2.97    |
+|    prob_true_act        | 31.1     |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.6e+03  |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 8        |
+|    round_num            | 19       |
+|    round_timestep_count | 131      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 2881     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 6.89e+03 |
+|    return_min           | -1e+04   |
+|    return_std           | 3.94e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.95     |
+|    success_min          | 0        |
+|    success_std          | 0.218    |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00175  |
+|    entropy              | -1.75    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 2.19e+03 |
+|    loss                 | -3.76    |
+|    neglogp              | -3.76    |
+|    prob_true_act        | 59.2     |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.79e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 9        |
+|    round_num            | 20       |
+|    round_timestep_count | 139      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 3020     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 8.08e+03 |
+|    return_min           | 6.98e+03 |
+|    return_std           | 370      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | 0.00258   |
+|    entropy              | -2.58     |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 2.31e+03  |
+|    loss                 | -3.48     |
+|    neglogp              | -3.48     |
+|    prob_true_act        | 127       |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 8.13e+03  |
+|    mean_episode_success | 1         |
+|    round_episode_count  | 10        |
+|    round_num            | 21        |
+|    round_timestep_count | 135       |
+|    total_expert_count   | 1106      |
+|    total_timesteps      | 3155      |
+| rollout/                |           |
+|    return_max           | 8.59e+03  |
+|    return_mean          | 6.35e+03  |
+|    return_min           | -9.31e+03 |
+|    return_std           | 5.09e+03  |
+|    success_max          | 1         |
+|    success_mean         | 0.9       |
+|    success_min          | 0         |
+|    success_std          | 0.3       |
+---------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00326  |
+|    entropy              | -3.26    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 2.52e+03 |
+|    loss                 | -3.61    |
+|    neglogp              | -3.61    |
+|    prob_true_act        | 247      |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.93e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 10       |
+|    round_num            | 22       |
+|    round_timestep_count | 147      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 3302     |
+| rollout/                |          |
+|    return_max           | 8.79e+03 |
+|    return_mean          | 7.96e+03 |
+|    return_min           | 6.75e+03 |
+|    return_std           | 571      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00417  |
+|    entropy              | -4.17    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 2.59e+03 |
+|    loss                 | -3.42    |
+|    neglogp              | -3.43    |
+|    prob_true_act        | 604      |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.89e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 9        |
+|    round_num            | 23       |
+|    round_timestep_count | 134      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 3436     |
+| rollout/                |          |
+|    return_max           | 8.58e+03 |
+|    return_mean          | 7.84e+03 |
+|    return_min           | 5.39e+03 |
+|    return_std           | 933      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | 0.00447   |
+|    entropy              | -4.47     |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 2.87e+03  |
+|    loss                 | -3.26     |
+|    neglogp              | -3.26     |
+|    prob_true_act        | 717       |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 6.83e+03  |
+|    mean_episode_success | 1         |
+|    round_episode_count  | 7         |
+|    round_num            | 24        |
+|    round_timestep_count | 146       |
+|    total_expert_count   | 1106      |
+|    total_timesteps      | 3582      |
+| rollout/                |           |
+|    return_max           | 8.59e+03  |
+|    return_mean          | 7.32e+03  |
+|    return_min           | -9.78e+03 |
+|    return_std           | 3.94e+03  |
+|    success_max          | 1         |
+|    success_mean         | 0.95      |
+|    success_min          | 0         |
+|    success_std          | 0.218     |
+---------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00492  |
+|    entropy              | -4.92    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 2.99e+03 |
+|    loss                 | -4.57    |
+|    neglogp              | -4.58    |
+|    prob_true_act        | 1.22e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 8.11e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 10       |
+|    round_num            | 25       |
+|    round_timestep_count | 134      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 3716     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.5e+03  |
+|    return_min           | 2.44e+03 |
+|    return_std           | 1.32e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00558  |
+|    entropy              | -5.58    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 3.07e+03 |
+|    loss                 | -3.47    |
+|    neglogp              | -3.48    |
+|    prob_true_act        | 2.33e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.49e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 8        |
+|    round_num            | 26       |
+|    round_timestep_count | 138      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 3854     |
+| rollout/                |          |
+|    return_max           | 8.79e+03 |
+|    return_mean          | 7.4e+03  |
+|    return_min           | 2.79e+03 |
+|    return_std           | 1.43e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00576  |
+|    entropy              | -5.76    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 3.25e+03 |
+|    loss                 | -2.05    |
+|    neglogp              | -2.05    |
+|    prob_true_act        | 2.66e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.42e+03 |
+|    mean_episode_success | 0.857    |
+|    round_episode_count  | 7        |
+|    round_num            | 27       |
+|    round_timestep_count | 134      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 3988     |
+| rollout/                |          |
+|    return_max           | 8.39e+03 |
+|    return_mean          | 6.59e+03 |
+|    return_min           | -9.9e+03 |
+|    return_std           | 3.94e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.95     |
+|    success_min          | 0        |
+|    success_std          | 0.218    |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00611  |
+|    entropy              | -6.11    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 3.39e+03 |
+|    loss                 | -4.7     |
+|    neglogp              | -4.71    |
+|    prob_true_act        | 3.46e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.9e+03  |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 9        |
+|    round_num            | 28       |
+|    round_timestep_count | 135      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 4123     |
+| rollout/                |          |
+|    return_max           | 8.79e+03 |
+|    return_mean          | 7.86e+03 |
+|    return_min           | 5.08e+03 |
+|    return_std           | 954      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00668  |
+|    entropy              | -6.68    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 3.48e+03 |
+|    loss                 | -8.08    |
+|    neglogp              | -8.09    |
+|    prob_true_act        | 6.35e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.68e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 8        |
+|    round_num            | 29       |
+|    round_timestep_count | 128      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 4251     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 8.19e+03 |
+|    return_min           | 7.41e+03 |
+|    return_std           | 312      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00665  |
+|    entropy              | -6.65    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 3.65e+03 |
+|    loss                 | -2.62    |
+|    neglogp              | -2.63    |
+|    prob_true_act        | 6.54e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 6.13e+03 |
+|    mean_episode_success | 0.875    |
+|    round_episode_count  | 8        |
+|    round_num            | 30       |
+|    round_timestep_count | 134      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 4385     |
+| rollout/                |          |
+|    return_max           | 8.58e+03 |
+|    return_mean          | 7.8e+03  |
+|    return_min           | 3.01e+03 |
+|    return_std           | 1.39e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00624  |
+|    entropy              | -6.24    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 3.87e+03 |
+|    loss                 | -8.1     |
+|    neglogp              | -8.11    |
+|    prob_true_act        | 4.13e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.96e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 9        |
+|    round_num            | 31       |
+|    round_timestep_count | 131      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 4516     |
+| rollout/                |          |
+|    return_max           | 8.8e+03  |
+|    return_mean          | 7.93e+03 |
+|    return_min           | 5.82e+03 |
+|    return_std           | 681      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00707  |
+|    entropy              | -7.07    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 3.9e+03  |
+|    loss                 | -7.88    |
+|    neglogp              | -7.89    |
+|    prob_true_act        | 9.84e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 8.09e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 10       |
+|    round_num            | 32       |
+|    round_timestep_count | 136      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 4652     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 8.03e+03 |
+|    return_min           | 6.63e+03 |
+|    return_std           | 463      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00671  |
+|    entropy              | -6.71    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 4.06e+03 |
+|    loss                 | -7.7     |
+|    neglogp              | -7.7     |
+|    prob_true_act        | 5.75e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.11e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 7        |
+|    round_num            | 33       |
+|    round_timestep_count | 133      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 4785     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 6.69e+03 |
+|    return_min           | -1e+04   |
+|    return_std           | 4.03e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.95     |
+|    success_min          | 0        |
+|    success_std          | 0.218    |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00688  |
+|    entropy              | -6.88    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 4.14e+03 |
+|    loss                 | -6.06    |
+|    neglogp              | -6.07    |
+|    prob_true_act        | 7.16e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 8.12e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 10       |
+|    round_num            | 34       |
+|    round_timestep_count | 135      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 4920     |
+| rollout/                |          |
+|    return_max           | 8.79e+03 |
+|    return_mean          | 8.33e+03 |
+|    return_min           | 7.97e+03 |
+|    return_std           | 190      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00717  |
+|    entropy              | -7.17    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 4.22e+03 |
+|    loss                 | -9.13    |
+|    neglogp              | -9.14    |
+|    prob_true_act        | 1.05e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.31e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 9        |
+|    round_num            | 35       |
+|    round_timestep_count | 166      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 5086     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.36e+03 |
+|    return_min           | 3.13e+03 |
+|    return_std           | 1.41e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | 0.00719   |
+|    entropy              | -7.19     |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 4.33e+03  |
+|    loss                 | -9.02     |
+|    neglogp              | -9.03     |
+|    prob_true_act        | 1.04e+04  |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 7.7e+03   |
+|    mean_episode_success | 1         |
+|    round_episode_count  | 8         |
+|    round_num            | 36        |
+|    round_timestep_count | 131       |
+|    total_expert_count   | 1106      |
+|    total_timesteps      | 5217      |
+| rollout/                |           |
+|    return_max           | 8.59e+03  |
+|    return_mean          | 7.34e+03  |
+|    return_min           | -9.35e+03 |
+|    return_std           | 3.85e+03  |
+|    success_max          | 1         |
+|    success_mean         | 0.95      |
+|    success_min          | 0         |
+|    success_std          | 0.218     |
+---------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00708  |
+|    entropy              | -7.08    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 4.46e+03 |
+|    loss                 | -3.44    |
+|    neglogp              | -3.44    |
+|    prob_true_act        | 9.1e+03  |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.48e+03 |
+|    mean_episode_success | 0.857    |
+|    round_episode_count  | 7        |
+|    round_num            | 37       |
+|    round_timestep_count | 133      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 5350     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 6.91e+03 |
+|    return_min           | -9.6e+03 |
+|    return_std           | 3.97e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.95     |
+|    success_min          | 0        |
+|    success_std          | 0.218    |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00747  |
+|    entropy              | -7.47    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 4.53e+03 |
+|    loss                 | -3.89    |
+|    neglogp              | -3.9     |
+|    prob_true_act        | 1.43e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.63e+03 |
+|    mean_episode_success | 0.857    |
+|    round_episode_count  | 7        |
+|    round_num            | 38       |
+|    round_timestep_count | 129      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 5479     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.84e+03 |
+|    return_min           | 2.56e+03 |
+|    return_std           | 1.28e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00802  |
+|    entropy              | -8.02    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 4.58e+03 |
+|    loss                 | 0.0295   |
+|    neglogp              | 0.0215   |
+|    prob_true_act        | 2.29e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.6e+03  |
+|    mean_episode_success | 0.857    |
+|    round_episode_count  | 7        |
+|    round_num            | 39       |
+|    round_timestep_count | 131      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 5610     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.59e+03 |
+|    return_min           | 4.44e+03 |
+|    return_std           | 1.34e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00765  |
+|    entropy              | -7.65    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 4.72e+03 |
+|    loss                 | -6.63    |
+|    neglogp              | -6.64    |
+|    prob_true_act        | 1.64e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 8.03e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 10       |
+|    round_num            | 40       |
+|    round_timestep_count | 139      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 5749     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 8.03e+03 |
+|    return_min           | 5.44e+03 |
+|    return_std           | 722      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00685  |
+|    entropy              | -6.85    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 4.93e+03 |
+|    loss                 | 15.9     |
+|    neglogp              | 15.9     |
+|    prob_true_act        | 6.63e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.53e+03 |
+|    mean_episode_success | 0.857    |
+|    round_episode_count  | 7        |
+|    round_num            | 41       |
+|    round_timestep_count | 132      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 5881     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 5.77e+03 |
+|    return_min           | -1e+04   |
+|    return_std           | 5.18e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.9      |
+|    success_min          | 0        |
+|    success_std          | 0.3      |
+--------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | 0.00715   |
+|    entropy              | -7.15     |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 4.99e+03  |
+|    loss                 | -5.03     |
+|    neglogp              | -5.04     |
+|    prob_true_act        | 1.02e+04  |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 8.34e+03  |
+|    mean_episode_success | 1         |
+|    round_episode_count  | 11        |
+|    round_num            | 42        |
+|    round_timestep_count | 135       |
+|    total_expert_count   | 1106      |
+|    total_timesteps      | 6016      |
+| rollout/                |           |
+|    return_max           | 8.79e+03  |
+|    return_mean          | 7e+03     |
+|    return_min           | -9.55e+03 |
+|    return_std           | 3.88e+03  |
+|    success_max          | 1         |
+|    success_mean         | 0.95      |
+|    success_min          | 0         |
+|    success_std          | 0.218     |
+---------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | 0.00762   |
+|    entropy              | -7.62     |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 5.04e+03  |
+|    loss                 | 5.21      |
+|    neglogp              | 5.21      |
+|    prob_true_act        | 1.56e+04  |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 3.71e+03  |
+|    mean_episode_success | 0.8       |
+|    round_episode_count  | 5         |
+|    round_num            | 43        |
+|    round_timestep_count | 133       |
+|    total_expert_count   | 1106      |
+|    total_timesteps      | 6149      |
+| rollout/                |           |
+|    return_max           | 8.79e+03  |
+|    return_mean          | 6.99e+03  |
+|    return_min           | -9.68e+03 |
+|    return_std           | 3.92e+03  |
+|    success_max          | 1         |
+|    success_mean         | 0.95      |
+|    success_min          | 0         |
+|    success_std          | 0.218     |
+---------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | 0.00723   |
+|    entropy              | -7.23     |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 5.17e+03  |
+|    loss                 | -4.24     |
+|    neglogp              | -4.25     |
+|    prob_true_act        | 9.64e+03  |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 7.75e+03  |
+|    mean_episode_success | 1         |
+|    round_episode_count  | 9         |
+|    round_num            | 44        |
+|    round_timestep_count | 141       |
+|    total_expert_count   | 1106      |
+|    total_timesteps      | 6290      |
+| rollout/                |           |
+|    return_max           | 8.39e+03  |
+|    return_mean          | 5.97e+03  |
+|    return_min           | -9.24e+03 |
+|    return_std           | 5.06e+03  |
+|    success_max          | 1         |
+|    success_mean         | 0.9       |
+|    success_min          | 0         |
+|    success_std          | 0.3       |
+---------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.0073   |
+|    entropy              | -7.3     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 5.26e+03 |
+|    loss                 | -5.19    |
+|    neglogp              | -5.2     |
+|    prob_true_act        | 1.16e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.36e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 7        |
+|    round_num            | 45       |
+|    round_timestep_count | 129      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 6419     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.81e+03 |
+|    return_min           | 4.88e+03 |
+|    return_std           | 911      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00734  |
+|    entropy              | -7.34    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 5.36e+03 |
+|    loss                 | 3.53     |
+|    neglogp              | 3.52     |
+|    prob_true_act        | 9.96e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.44e+03 |
+|    mean_episode_success | 0.857    |
+|    round_episode_count  | 7        |
+|    round_num            | 46       |
+|    round_timestep_count | 136      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 6555     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.94e+03 |
+|    return_min           | 3.41e+03 |
+|    return_std           | 1.11e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | 0.00708   |
+|    entropy              | -7.08     |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 5.48e+03  |
+|    loss                 | -8.49     |
+|    neglogp              | -8.5      |
+|    prob_true_act        | 8.74e+03  |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 8.12e+03  |
+|    mean_episode_success | 1         |
+|    round_episode_count  | 10        |
+|    round_num            | 47        |
+|    round_timestep_count | 134       |
+|    total_expert_count   | 1106      |
+|    total_timesteps      | 6689      |
+| rollout/                |           |
+|    return_max           | 8.6e+03   |
+|    return_mean          | 7.28e+03  |
+|    return_min           | -9.77e+03 |
+|    return_std           | 3.93e+03  |
+|    success_max          | 1         |
+|    success_mean         | 0.95      |
+|    success_min          | 0         |
+|    success_std          | 0.218     |
+---------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00753  |
+|    entropy              | -7.53    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 5.56e+03 |
+|    loss                 | -0.716   |
+|    neglogp              | -0.723   |
+|    prob_true_act        | 1.23e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.19e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 7        |
+|    round_num            | 48       |
+|    round_timestep_count | 132      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 6821     |
+| rollout/                |          |
+|    return_max           | 8.4e+03  |
+|    return_mean          | 7.94e+03 |
+|    return_min           | 5.66e+03 |
+|    return_std           | 636      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00799  |
+|    entropy              | -7.99    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 5.63e+03 |
+|    loss                 | -0.437   |
+|    neglogp              | -0.445   |
+|    prob_true_act        | 2.04e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 8.28e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 11       |
+|    round_num            | 49       |
+|    round_timestep_count | 139      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 6960     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 8.17e+03 |
+|    return_min           | 6.99e+03 |
+|    return_std           | 497      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00815  |
+|    entropy              | -8.15    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 5.74e+03 |
+|    loss                 | -9.47    |
+|    neglogp              | -9.48    |
+|    prob_true_act        | 2.31e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 8.08e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 10       |
+|    round_num            | 50       |
+|    round_timestep_count | 137      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 7097     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.62e+03 |
+|    return_min           | 3.4e+03  |
+|    return_std           | 1.34e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00685  |
+|    entropy              | -6.85    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 6.07e+03 |
+|    loss                 | -1.41    |
+|    neglogp              | -1.42    |
+|    prob_true_act        | 6.87e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 4.73e+03 |
+|    mean_episode_success | 0.833    |
+|    round_episode_count  | 6        |
+|    round_num            | 51       |
+|    round_timestep_count | 135      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 7232     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.89e+03 |
+|    return_min           | 6.57e+03 |
+|    return_std           | 577      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00719  |
+|    entropy              | -7.19    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 6.14e+03 |
+|    loss                 | -6.1     |
+|    neglogp              | -6.11    |
+|    prob_true_act        | 8.82e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.38e+03 |
+|    mean_episode_success | 0.857    |
+|    round_episode_count  | 7        |
+|    round_num            | 52       |
+|    round_timestep_count | 137      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 7369     |
+| rollout/                |          |
+|    return_max           | 8.4e+03  |
+|    return_mean          | 7.07e+03 |
+|    return_min           | -1e+04   |
+|    return_std           | 3.94e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.95     |
+|    success_min          | 0        |
+|    success_std          | 0.218    |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00757  |
+|    entropy              | -7.57    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 6.2e+03  |
+|    loss                 | 18.3     |
+|    neglogp              | 18.3     |
+|    prob_true_act        | 1.42e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 6.05e+03 |
+|    mean_episode_success | 0.889    |
+|    round_episode_count  | 9        |
+|    round_num            | 53       |
+|    round_timestep_count | 161      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 7530     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 8.06e+03 |
+|    return_min           | 6.19e+03 |
+|    return_std           | 613      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00764  |
+|    entropy              | -7.64    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 6.34e+03 |
+|    loss                 | -9.53    |
+|    neglogp              | -9.54    |
+|    prob_true_act        | 1.62e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.25e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 8        |
+|    round_num            | 54       |
+|    round_timestep_count | 145      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 7675     |
+| rollout/                |          |
+|    return_max           | 8.39e+03 |
+|    return_mean          | 4.92e+03 |
+|    return_min           | -1e+04   |
+|    return_std           | 6.24e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.85     |
+|    success_min          | 0        |
+|    success_std          | 0.357    |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00773  |
+|    entropy              | -7.73    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 6.46e+03 |
+|    loss                 | 7.21     |
+|    neglogp              | 7.2      |
+|    prob_true_act        | 1.45e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.2e+03  |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 7        |
+|    round_num            | 55       |
+|    round_timestep_count | 133      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 7808     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.81e+03 |
+|    return_min           | 5.64e+03 |
+|    return_std           | 826      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00734  |
+|    entropy              | -7.34    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 6.64e+03 |
+|    loss                 | -8.7     |
+|    neglogp              | -8.71    |
+|    prob_true_act        | 1.14e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.63e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 8        |
+|    round_num            | 56       |
+|    round_timestep_count | 133      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 7941     |
+| rollout/                |          |
+|    return_max           | 8.8e+03  |
+|    return_mean          | 8.19e+03 |
+|    return_min           | 7.41e+03 |
+|    return_std           | 318      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00779  |
+|    entropy              | -7.79    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 6.72e+03 |
+|    loss                 | 5.21     |
+|    neglogp              | 5.2      |
+|    prob_true_act        | 1.58e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 3.3e+03  |
+|    mean_episode_success | 0.8      |
+|    round_episode_count  | 5        |
+|    round_num            | 57       |
+|    round_timestep_count | 137      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 8078     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.87e+03 |
+|    return_min           | 6.7e+03  |
+|    return_std           | 596      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.0079   |
+|    entropy        | -7.9     |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 6.83e+03 |
+|    loss           | -9.37    |
+|    neglogp        | -9.38    |
+|    prob_true_act  | 1.66e+04 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.59e+03 |
+|    return_mean    | 7.61e+03 |
+|    return_min     | 2.44e+03 |
+|    return_std     | 1.55e+03 |
+|    success_max    | 1        |
+|    success_mean   | 1        |
+|    success_min    | 1        |
+|    success_std    | 0        |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00791  |
+|    entropy              | -7.91    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 6.83e+03 |
+|    loss                 | 10.6     |
+|    neglogp              | 10.6     |
+|    prob_true_act        | 1.61e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 2.27e+03 |
+|    mean_episode_success | 0.667    |
+|    round_episode_count  | 6        |
+|    round_num            | 58       |
+|    round_timestep_count | 152      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 8230     |
+| rollout/                |          |
+|    return_max           | 8.6e+03  |
+|    return_mean          | 7.14e+03 |
+|    return_min           | -9.8e+03 |
+|    return_std           | 3.92e+03 |
+|    success_max          | 1        |
+|    success_mean         | 0.95     |
+|    success_min          | 0        |
+|    success_std          | 0.218    |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00753  |
+|    entropy        | -7.53    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 7.01e+03 |
+|    loss           | -8.82    |
+|    neglogp        | -8.83    |
+|    prob_true_act  | 1.22e+04 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.59e+03 |
+|    return_mean    | 7.83e+03 |
+|    return_min     | 3.3e+03  |
+|    return_std     | 1.15e+03 |
+|    success_max    | 1        |
+|    success_mean   | 1        |
+|    success_min    | 1        |
+|    success_std    | 0        |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00756  |
+|    entropy              | -7.56    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 7.01e+03 |
+|    loss                 | -7.97    |
+|    neglogp              | -7.98    |
+|    prob_true_act        | 1.19e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 4.67e+03 |
+|    mean_episode_success | 0.833    |
+|    round_episode_count  | 6        |
+|    round_num            | 59       |
+|    round_timestep_count | 138      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 8368     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.67e+03 |
+|    return_min           | 2.46e+03 |
+|    return_std           | 1.48e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00724  |
+|    entropy        | -7.24    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 7.18e+03 |
+|    loss           | -8.9     |
+|    neglogp        | -8.91    |
+|    prob_true_act  | 9.92e+03 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.59e+03 |
+|    return_mean    | 7.95e+03 |
+|    return_min     | 5.2e+03  |
+|    return_std     | 716      |
+|    success_max    | 1        |
+|    success_mean   | 1        |
+|    success_min    | 1        |
+|    success_std    | 0        |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00728  |
+|    entropy              | -7.28    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 7.18e+03 |
+|    loss                 | -7.9     |
+|    neglogp              | -7.91    |
+|    prob_true_act        | 9.97e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.89e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 9        |
+|    round_num            | 60       |
+|    round_timestep_count | 132      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 8500     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.71e+03 |
+|    return_min           | 2.05e+03 |
+|    return_std           | 1.34e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00785  |
+|    entropy        | -7.85    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 7.25e+03 |
+|    loss           | -9.25    |
+|    neglogp        | -9.26    |
+|    prob_true_act  | 1.67e+04 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.59e+03 |
+|    return_mean    | 7.48e+03 |
+|    return_min     | 2.95e+03 |
+|    return_std     | 1.4e+03  |
+|    success_max    | 1        |
+|    success_mean   | 1        |
+|    success_min    | 1        |
+|    success_std    | 0        |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00792  |
+|    entropy              | -7.92    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 7.26e+03 |
+|    loss                 | -3.08    |
+|    neglogp              | -3.09    |
+|    prob_true_act        | 1.63e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.59e+03 |
+|    mean_episode_success | 0.857    |
+|    round_episode_count  | 7        |
+|    round_num            | 61       |
+|    round_timestep_count | 129      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 8629     |
+| rollout/                |          |
+|    return_max           | 8.79e+03 |
+|    return_mean          | 7.96e+03 |
+|    return_min           | 5.82e+03 |
+|    return_std           | 753      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00801  |
+|    entropy        | -8.01    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 7.38e+03 |
+|    loss           | -9.46    |
+|    neglogp        | -9.47    |
+|    prob_true_act  | 2.11e+04 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.59e+03 |
+|    return_mean    | 6.94e+03 |
+|    return_min     | -8e+03   |
+|    return_std     | 3.54e+03 |
+|    success_max    | 1        |
+|    success_mean   | 0.95     |
+|    success_min    | 0        |
+|    success_std    | 0.218    |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00808  |
+|    entropy              | -8.08    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 7.38e+03 |
+|    loss                 | -9.17    |
+|    neglogp              | -9.18    |
+|    prob_true_act        | 1.87e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 6.68e+03 |
+|    mean_episode_success | 0.909    |
+|    round_episode_count  | 11       |
+|    round_num            | 62       |
+|    round_timestep_count | 175      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 8804     |
+| rollout/                |          |
+|    return_max           | 8.99e+03 |
+|    return_mean          | 7.94e+03 |
+|    return_min           | 5.79e+03 |
+|    return_std           | 780      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00724  |
+|    entropy        | -7.24    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 7.64e+03 |
+|    loss           | -8.65    |
+|    neglogp        | -8.66    |
+|    prob_true_act  | 9.77e+03 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.79e+03 |
+|    return_mean    | 8.09e+03 |
+|    return_min     | 6.71e+03 |
+|    return_std     | 508      |
+|    success_max    | 1        |
+|    success_mean   | 1        |
+|    success_min    | 1        |
+|    success_std    | 0        |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00733  |
+|    entropy              | -7.33    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 7.64e+03 |
+|    loss                 | 9.39     |
+|    neglogp              | 9.38     |
+|    prob_true_act        | 1.1e+04  |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.68e+03 |
+|    mean_episode_success | 0.857    |
+|    round_episode_count  | 7        |
+|    round_num            | 63       |
+|    round_timestep_count | 130      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 8934     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 8.06e+03 |
+|    return_min           | 5.74e+03 |
+|    return_std           | 707      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+---------------------------------
+| batch_size        | 128       |
+| bc/               |           |
+|    batch_num      | 501       |
+|    ent_loss       | 0.0069    |
+|    entropy        | -6.9      |
+|    epoch_num      | 3         |
+|    l2_loss        | 0         |
+|    l2_norm        | 7.8e+03   |
+|    loss           | -8.36     |
+|    neglogp        | -8.37     |
+|    prob_true_act  | 7.2e+03   |
+|    samples_so_far | 64128     |
+| rollout/          |           |
+|    return_max     | 8.4e+03   |
+|    return_mean    | 5.7e+03   |
+|    return_min     | -9.44e+03 |
+|    return_std     | 5.26e+03  |
+|    success_max    | 1         |
+|    success_mean   | 0.9       |
+|    success_min    | 0         |
+|    success_std    | 0.3       |
+---------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | 0.00701   |
+|    entropy              | -7.01     |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 7.81e+03  |
+|    loss                 | -6.95     |
+|    neglogp              | -6.95     |
+|    prob_true_act        | 8.03e+03  |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 5.29e+03  |
+|    mean_episode_success | 0.857     |
+|    round_episode_count  | 7         |
+|    round_num            | 64        |
+|    round_timestep_count | 139       |
+|    total_expert_count   | 1106      |
+|    total_timesteps      | 9073      |
+| rollout/                |           |
+|    return_max           | 8.59e+03  |
+|    return_mean          | 6.3e+03   |
+|    return_min           | -9.81e+03 |
+|    return_std           | 5.23e+03  |
+|    success_max          | 1         |
+|    success_mean         | 0.9       |
+|    success_min          | 0         |
+|    success_std          | 0.3       |
+---------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00739  |
+|    entropy        | -7.39    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 7.89e+03 |
+|    loss           | -8.64    |
+|    neglogp        | -8.64    |
+|    prob_true_act  | 1.06e+04 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.59e+03 |
+|    return_mean    | 8e+03    |
+|    return_min     | 3.98e+03 |
+|    return_std     | 1e+03    |
+|    success_max    | 1        |
+|    success_mean   | 1        |
+|    success_min    | 1        |
+|    success_std    | 0        |
+--------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | 0.00751   |
+|    entropy              | -7.51     |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 7.9e+03   |
+|    loss                 | -1.8      |
+|    neglogp              | -1.8      |
+|    prob_true_act        | 1.2e+04   |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 4.79e+03  |
+|    mean_episode_success | 0.833     |
+|    round_episode_count  | 6         |
+|    round_num            | 65        |
+|    round_timestep_count | 131       |
+|    total_expert_count   | 1106      |
+|    total_timesteps      | 9204      |
+| rollout/                |           |
+|    return_max           | 8.59e+03  |
+|    return_mean          | 6.2e+03   |
+|    return_min           | -9.78e+03 |
+|    return_std           | 5.35e+03  |
+|    success_max          | 1         |
+|    success_mean         | 0.9       |
+|    success_min          | 0         |
+|    success_std          | 0.3       |
+---------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00693  |
+|    entropy        | -6.93    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 8.1e+03  |
+|    loss           | -8.38    |
+|    neglogp        | -8.38    |
+|    prob_true_act  | 6.97e+03 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.79e+03 |
+|    return_mean    | 7.96e+03 |
+|    return_min     | 6.88e+03 |
+|    return_std     | 540      |
+|    success_max    | 1        |
+|    success_mean   | 1        |
+|    success_min    | 1        |
+|    success_std    | 0        |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00707  |
+|    entropy              | -7.07    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 8.11e+03 |
+|    loss                 | -8.39    |
+|    neglogp              | -8.4     |
+|    prob_true_act        | 8.16e+03 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 8.04e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 10       |
+|    round_num            | 66       |
+|    round_timestep_count | 140      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 9344     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.31e+03 |
+|    return_min           | 2.51e+03 |
+|    return_std           | 1.66e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00753  |
+|    entropy        | -7.53    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 8.2e+03  |
+|    loss           | -9.05    |
+|    neglogp        | -9.06    |
+|    prob_true_act  | 1.2e+04  |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.4e+03  |
+|    return_mean    | 7.2e+03  |
+|    return_min     | -1e+04   |
+|    return_std     | 3.96e+03 |
+|    success_max    | 1        |
+|    success_mean   | 0.95     |
+|    success_min    | 0        |
+|    success_std    | 0.218    |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.0077   |
+|    entropy              | -7.7     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 8.2e+03  |
+|    loss                 | -1.67    |
+|    neglogp              | -1.67    |
+|    prob_true_act        | 1.48e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 4.46e+03 |
+|    mean_episode_success | 0.833    |
+|    round_episode_count  | 6        |
+|    round_num            | 67       |
+|    round_timestep_count | 148      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 9492     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.77e+03 |
+|    return_min           | 5.47e+03 |
+|    return_std           | 871      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00792  |
+|    entropy        | -7.92    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 8.3e+03  |
+|    loss           | -9.41    |
+|    neglogp        | -9.42    |
+|    prob_true_act  | 1.78e+04 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.59e+03 |
+|    return_mean    | 7.78e+03 |
+|    return_min     | 1.83e+03 |
+|    return_std     | 1.42e+03 |
+|    success_max    | 1        |
+|    success_mean   | 1        |
+|    success_min    | 1        |
+|    success_std    | 0        |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00807  |
+|    entropy              | -8.07    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 8.31e+03 |
+|    loss                 | -0.102   |
+|    neglogp              | -0.11    |
+|    prob_true_act        | 1.74e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.65e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 8        |
+|    round_num            | 68       |
+|    round_timestep_count | 129      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 9621     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 8.16e+03 |
+|    return_min           | 6.89e+03 |
+|    return_std           | 392      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00729  |
+|    entropy        | -7.29    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 8.56e+03 |
+|    loss           | -8.24    |
+|    neglogp        | -8.25    |
+|    prob_true_act  | 9.13e+03 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.79e+03 |
+|    return_mean    | 7.85e+03 |
+|    return_min     | 5.36e+03 |
+|    return_std     | 871      |
+|    success_max    | 1        |
+|    success_mean   | 1        |
+|    success_min    | 1        |
+|    success_std    | 0        |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00749  |
+|    entropy              | -7.49    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 8.56e+03 |
+|    loss                 | -9.15    |
+|    neglogp              | -9.16    |
+|    prob_true_act        | 1.29e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.59e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 9        |
+|    round_num            | 69       |
+|    round_timestep_count | 151      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 9772     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.68e+03 |
+|    return_min           | 3.49e+03 |
+|    return_std           | 1.19e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00716  |
+|    entropy        | -7.16    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 8.75e+03 |
+|    loss           | -8.5     |
+|    neglogp        | -8.51    |
+|    prob_true_act  | 8.08e+03 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 9.2e+03  |
+|    return_mean    | 6.96e+03 |
+|    return_min     | 1.59e+03 |
+|    return_std     | 2.21e+03 |
+|    success_max    | 1        |
+|    success_mean   | 1        |
+|    success_min    | 1        |
+|    success_std    | 0        |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00739  |
+|    entropy              | -7.39    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 8.75e+03 |
+|    loss                 | -6.34    |
+|    neglogp              | -6.35    |
+|    prob_true_act        | 1.06e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 7.08e+03 |
+|    mean_episode_success | 1        |
+|    round_episode_count  | 7        |
+|    round_num            | 70       |
+|    round_timestep_count | 140      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 9912     |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 7.51e+03 |
+|    return_min           | 2.48e+03 |
+|    return_std           | 1.45e+03 |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00747  |
+|    entropy        | -7.47    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 8.88e+03 |
+|    loss           | -8.93    |
+|    neglogp        | -8.94    |
+|    prob_true_act  | 1.09e+04 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.59e+03 |
+|    return_mean    | 7.33e+03 |
+|    return_min     | -1e+04   |
+|    return_std     | 3.98e+03 |
+|    success_max    | 1        |
+|    success_mean   | 0.95     |
+|    success_min    | 0        |
+|    success_std    | 0.218    |
+--------------------------------
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | 0.00772  |
+|    entropy              | -7.72    |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 8.88e+03 |
+|    loss                 | -9.02    |
+|    neglogp              | -9.03    |
+|    prob_true_act        | 1.51e+04 |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 5.28e+03 |
+|    mean_episode_success | 0.857    |
+|    round_episode_count  | 7        |
+|    round_num            | 71       |
+|    round_timestep_count | 143      |
+|    total_expert_count   | 1106     |
+|    total_timesteps      | 10055    |
+| rollout/                |          |
+|    return_max           | 8.59e+03 |
+|    return_mean          | 8.05e+03 |
+|    return_min           | 7.19e+03 |
+|    return_std           | 414      |
+|    success_max          | 1        |
+|    success_mean         | 1        |
+|    success_min          | 1        |
+|    success_std          | 0        |
+--------------------------------------
+--------------------------------
+| batch_size        | 128      |
+| bc/               |          |
+|    batch_num      | 501      |
+|    ent_loss       | 0.00702  |
+|    entropy        | -7.02    |
+|    epoch_num      | 3        |
+|    l2_loss        | 0        |
+|    l2_norm        | 9.12e+03 |
+|    loss           | -7.99    |
+|    neglogp        | -8       |
+|    prob_true_act  | 6.97e+03 |
+|    samples_so_far | 64128    |
+| rollout/          |          |
+|    return_max     | 8.59e+03 |
+|    return_mean    | 7.8e+03  |
+|    return_min     | 3.39e+03 |
+|    return_std     | 1.24e+03 |
+|    success_max    | 1        |
+|    success_mean   | 1        |
+|    success_min    | 1        |
+|    success_std    | 0        |
+--------------------------------

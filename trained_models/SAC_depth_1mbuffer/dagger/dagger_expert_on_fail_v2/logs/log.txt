@@ -1,0 +1,62 @@
+--------------------------------------
+| batch_size              | 128      |
+| bc/                     |          |
+|    batch_num            | 1        |
+|    ent_loss             | -0.00709 |
+|    entropy              | 7.09     |
+|    epoch_num            | 0        |
+|    l2_loss              | 0        |
+|    l2_norm              | 929      |
+|    loss                 | 6.12     |
+|    neglogp              | 6.12     |
+|    prob_true_act        | 0.00234  |
+|    samples_so_far       | 128      |
+| dagger/                 |          |
+|    mean_episode_reward  | 6.04e+03 |
+|    mean_episode_success | 0.889    |
+|    round_episode_count  | 9        |
+|    round_num            | 0        |
+|    round_timestep_count | 160      |
+|    total_expert_count   | 160      |
+|    total_timesteps      | 160      |
+| rollout/                |          |
+|    return_max           | -9.9e+03 |
+|    return_mean          | -1e+04   |
+|    return_min           | -1e+04   |
+|    return_std           | 21.4     |
+|    success_max          | 0        |
+|    success_mean         | 0        |
+|    success_min          | 0        |
+|    success_std          | 0        |
+--------------------------------------
+---------------------------------------
+| batch_size              | 128       |
+| bc/                     |           |
+|    batch_num            | 1         |
+|    ent_loss             | -0.00706  |
+|    entropy              | 7.06      |
+|    epoch_num            | 0         |
+|    l2_loss              | 0         |
+|    l2_norm              | 932       |
+|    loss                 | 5.49      |
+|    neglogp              | 5.5       |
+|    prob_true_act        | 0.00487   |
+|    samples_so_far       | 128       |
+| dagger/                 |           |
+|    mean_episode_reward  | 7.69e+03  |
+|    mean_episode_success | 1         |
+|    round_episode_count  | 8         |
+|    round_num            | 1         |
+|    round_timestep_count | 135       |
+|    total_expert_count   | 246       |
+|    total_timesteps      | 295       |
+| rollout/                |           |
+|    return_max           | -9.79e+03 |
+|    return_mean          | -9.99e+03 |
+|    return_min           | -1e+04    |
+|    return_std           | 45.3      |
+|    success_max          | 0         |
+|    success_mean         | 0         |
+|    success_min          | 0         |
+|    success_std          | 0         |
+---------------------------------------

@@ -34,7 +34,7 @@ def main(args):
     trainer = SimpleDAggerTrainer(venv=env, scratch_dir=save_dir, expert_policy=expert, bc_trainer=bc_trainer,
                                   custom_logger=dagger_logger)
 
-    bc_train_kwargs = {"log_rollouts_n_episodes": args.test_rollouts, "n_epochs": 4}
+    bc_train_kwargs = {"log_rollouts_n_episodes": args.test_rollouts, "n_epochs": 6}
     trainer.train(total_timesteps=args.num_timesteps, rollout_round_min_timesteps=args.round_episodes,
                   bc_train_kwargs=bc_train_kwargs, replace_only_on_failure=args.expert_on_fail)
 

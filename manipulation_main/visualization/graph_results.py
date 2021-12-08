@@ -71,6 +71,27 @@ def graph_dagger_expert_on_fail(cnn_log_path: str, expert_log_path: str):
     plt.legend(["Query Expert Randomly", "Only Query Expert on Failure"], loc="upper left")
     plt.show()
 
+def graph_dagger_expert_on_fail_v2(cnn_log_path: str, expert_log_path: str):
+    cnn_df = pd.read_csv(cnn_log_path)
+    expert_df = pd.read_csv(expert_log_path)
+    combined_df = pd.DataFrame()
+    for index, row in cnn_df.iterrows():
+        if pd.isna(row["dagger/total_expert_count"]):
+            continue
+        combined_df.at[row["dagger/total_expert_count"], "cnn_success"] = row["rollout/success_mean"]
+
+    for index, row in expert_df.iterrows():
+        if pd.isna(row["dagger/total_expert_count"]):
+            continue
+        combined_df.at[row["dagger/total_expert_count"], "tran_success"] = row["rollout/success_mean"]
+
+    plt.plot(combined_df)
+    plt.xlabel("Number of expert demonstrations")
+    plt.ylabel("Mean episode success")
+    plt.title("Only Query Expert on Episode Failure for Dagger Task")
+    plt.legend(["Query Expert Randomly", "Only Query Expert on Failure v2"], loc="upper left")
+    plt.show()
+
 
 def graph_bc_transformer(cnn_log_path: str, trans_log_path: str):
     cnn_df = pd.read_csv(cnn_log_path)
@@ -128,9 +149,13 @@ if __name__ == "__main__":
     dagger_expert_log_path = os.path.join(BASE_DIR, "trained_models", "SAC_depth_1mbuffer", "dagger",
                                         "dagger_expert_on_fail", "logs",
                                         "progress.csv")
+    dagger_expert_v2_log_path = os.path.join(BASE_DIR, "trained_models", "SAC_depth_1mbuffer", "dagger",
+                                        "dagger_expert_on_fail_v2", "logs",
+                                        "progress.csv")
     rl_log_path = os.path.join(BASE_DIR, "trained_models", "SAC_depth_1mbuffer", "logs.csv")
     # graph_bc_dagger(cnn_bc_log_path, dagger_cnn_log_path)
     # graph_bc_transformer(cnn_bc_log_path, tran_bc_log_path)
     # graph_dagger_transformer(dagger_cnn_log_path, dagger_trns_log_path)
     # graph_dagger_expert_on_fail(dagger_cnn_log_path, dagger_expert_log_path)
-    graph_env_interactions(cnn_bc_log_path, dagger_cnn_log_path, rl_log_path)
+    graph_dagger_expert_on_fail_v2(dagger_cnn_log_path, dagger_expert_v2_log_path)
+    # graph_env_interactions(cnn_bc_log_path, dagger_cnn_log_path, rl_log_path)

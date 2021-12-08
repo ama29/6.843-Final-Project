@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -o run_bc_cnn_precise.log-%j
+#SBATCH -o run_dagger_cnn.log-%j
 #SBATCH -c 10
 #SBATCH --gres=gpu:volta:1
 

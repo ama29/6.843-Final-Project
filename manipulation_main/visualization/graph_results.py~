@@ -140,15 +140,19 @@ def graph_env_interactions(bc_log_path: str, dagger_log_path: str, rl_log_path: 
 
 def graph_dagger_beta(dagger_beta_log_path: str, beta: int):
     dagger_df = pd.read_csv(dagger_beta_log_path)
+    x_values = []
+    y_values = []
     for index, row in dagger_df.iterrows():
         if pd.isna(row["dagger/total_expert_count"]):
             continue
-        dagger_df.at[row["dagger/total_expert_count"], "beta_success"] = row["rollout/success_mean"]
+        x_values.append(float(row["dagger/total_expert_count"]))
+        y_values.append(float(row["rollout/success_mean"]))
+        #dagger_df.at[row["dagger/total_expert_count"], "beta_success"] = row["rollout/success_mean"]
     
     print("Plotting" + str(beta))
-    plt.plot(dagger_df)
-    plt.xlim(0, 50)
-    plt.ylim(0, 1000)
+    plt.plot(x_values, y_values)
+    plt.xlim(0, 15)
+    plt.ylim(-10000, 10000)
     plt.xlabel("Number of expert demonstrations")
     plt.ylabel("Mean episode success")
     plt.title("Episode success vs " + str(100-beta) + "% randomly injected imitation policy")

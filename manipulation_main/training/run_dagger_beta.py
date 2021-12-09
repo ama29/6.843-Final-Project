@@ -34,7 +34,7 @@ def run_dagger_range(args, min_beta: int, max_beta: int, step: int):
 
 def run_one_dagger(args, beta):
     os.chdir(BASE_DIR)  # all filepaths are relative to repo root in other files
-    dagger_dir = os.path.join(BASE_DIR, args.model_dir, "dagger")
+    dagger_dir = os.path.join(BASE_DIR, args.model_dir, "dagger", args.log_dir)
     
     env, expert = get_env_expert(args)
     # define policy to be learned
@@ -44,15 +44,14 @@ def run_one_dagger(args, beta):
     feat_cls = TransposedVisTransformer if args.use_transformer else TransposeNatureCNN
     train_policy = ActorCriticCnnPolicy(observation_space=ob_space, action_space=ac_space, lr_schedule=lambda x: 0.005,                                         features_extractor_class=feat_cls)
                                                                                                                     
-    log_dir = os.path.join(dagger_dir, "logs") 
-    bc_trainer = BC(observation_space=ob_space, action_space=ac_space, demonstrations=None, policy=train_policy)
+    log_dir = os.path.join(dagger_dir, f"logs") 
+    bc_trainer = BC(observation_space=ob_space, action_space=ac_space, demonstrations=None, policy=train_policy, batch_size=128)
     # construct dagger instance and train
     dagger_logger = logger.configure(log_dir)
     save_dir = os.path.join(dagger_dir, "dagger_model")
-    bc_train_args = {"log_rollouts_n_episodes": args.test_rollouts, "batch_size": 128}
-    trainer = SimpleDAggerTrainer(venv=env, scratch_dir=save_dir, beta_schedule=beta, expert_policy=expert, bc_trainer=bc_trainer,
-            custom_logger=dagger_logger)
-    trainer.train(total_timesteps=args.num_timesteps, rollout_round_min_timesteps=100)
+    bc_train_kwargs = {"log_rollouts_n_episodes": args.test_rollouts, "n_epochs": 4}
+    trainer = SimpleDAggerTrainer(venv=env, scratch_dir=save_dir, beta_schedule=beta, expert_policy=expert, bc_trainer=bc_trainer, custom_logger=dagger_logger)
+    trainer.train(total_timesteps=args.num_timesteps, rollout_round_min_timesteps=args.round_episodes, bc_train_kwargs=bc_train_kwargs)
     trainer.save_policy(os.path.join(dagger_dir, "final_policy.pt"))
     
     if args.num_test_episodes is not None:
@@ -76,7 +75,7 @@ if __name__ == "__main__":
     train_parser.add_argument("--num_episodes", type=int)
     train_parser.add_argument("--expert_on_fail", action="store_true")     
     train_parser.add_argument("--num_test_episodes", type=int, default=None)  
-    train_parser.add_argument("--log_dir", type=str, default=None)
+    train_parser.add_argument("--log_dir", type=str, default="")
     train_parser.add_argument("--max_expert_demos", type=int, default=None)
     train_parser.add_argument("--run_range", action="store_true")
     train_parser.add_argument("--range_min", type=int, default=None)

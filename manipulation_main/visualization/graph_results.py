@@ -138,6 +138,19 @@ def graph_env_interactions(bc_log_path: str, dagger_log_path: str, rl_log_path: 
     plt.show()
 
 
+def graph_dagger_beta(dagger_beta_log_path: str, beta: int):
+    dagger_df = pd.read_csv(dagger_beta_log_path)
+    for index, row in dagger_df.iterrows():
+        if pd.isna(row["dagger/total_expert_count"]):
+            continue
+        dagger_df.at[row["dagger/total_expert_count"], "beta_success"] = row["rollout/success_mean"]
+    
+    print("Plotting" + str(beta))
+    plt.plot(dagger_df)
+    plt.xlabel("Number of expert demonstrations")
+    plt.ylabel("Mean episode success")
+    plt.title("Episode success vs " + str(100-beta) + "% randomly injected imitation policy")
+    plt.savefig("dagger_beta"+str(beta)+".png")
 if __name__ == "__main__":
     cnn_bc_log_path = os.path.join(BASE_DIR, "trained_models", "SAC_depth_1mbuffer", "bc", "cnn_precise_all_logs.csv")
     tran_bc_log_path = os.path.join(BASE_DIR, "trained_models", "SAC_depth_1mbuffer", "bc", "tran_precise_all_logs.csv")
@@ -153,9 +166,12 @@ if __name__ == "__main__":
                                         "dagger_expert_on_fail_v2", "logs",
                                         "progress.csv")
     rl_log_path = os.path.join(BASE_DIR, "trained_models", "SAC_depth_1mbuffer", "logs.csv")
+    for beta in range(5, 105, 10):
+        dagger_beta_log_path = os.path.join(BASE_DIR, "trained_models", "SAC_depth_1mbuffer", "dagger", "dagger_beta" + str(beta), "logs", "progress.csv")
+        graph_dagger_beta(dagger_beta_log_path, beta) 
     # graph_bc_dagger(cnn_bc_log_path, dagger_cnn_log_path)
     # graph_bc_transformer(cnn_bc_log_path, tran_bc_log_path)
     # graph_dagger_transformer(dagger_cnn_log_path, dagger_trns_log_path)
     # graph_dagger_expert_on_fail(dagger_cnn_log_path, dagger_expert_log_path)
-    graph_dagger_expert_on_fail_v2(dagger_cnn_log_path, dagger_expert_v2_log_path)
+    #graph_dagger_expert_on_fail_v2(dagger_cnn_log_path, dagger_expert_v2_log_path)
     # graph_env_interactions(cnn_bc_log_path, dagger_cnn_log_path, rl_log_path)

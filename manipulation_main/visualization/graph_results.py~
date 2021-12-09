@@ -148,11 +148,10 @@ def graph_dagger_beta(dagger_beta_log_path: str, beta: int):
         x_values.append(float(row["dagger/total_expert_count"]))
         y_values.append(float(row["rollout/success_mean"]))
         #dagger_df.at[row["dagger/total_expert_count"], "beta_success"] = row["rollout/success_mean"]
-    
+    print("x", x_values)
+    print("y", y_values)
     print("Plotting" + str(beta))
     plt.plot(x_values, y_values)
-    plt.xlim(0, 15)
-    plt.ylim(-10000, 10000)
     plt.xlabel("Number of expert demonstrations")
     plt.ylabel("Mean episode success")
     plt.title("Episode success vs " + str(100-beta) + "% randomly injected imitation policy")

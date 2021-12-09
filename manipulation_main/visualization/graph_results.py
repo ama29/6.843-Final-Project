@@ -147,9 +147,12 @@ def graph_dagger_beta(dagger_beta_log_path: str, beta: int):
     
     print("Plotting" + str(beta))
     plt.plot(dagger_df)
+    plt.xlim(0, 50)
+    plt.ylim(0, 1000)
     plt.xlabel("Number of expert demonstrations")
     plt.ylabel("Mean episode success")
     plt.title("Episode success vs " + str(100-beta) + "% randomly injected imitation policy")
+    plt.legend(["Dagger beta success"], loc="lower right")
     plt.savefig("dagger_beta"+str(beta)+".png")
 if __name__ == "__main__":
     cnn_bc_log_path = os.path.join(BASE_DIR, "trained_models", "SAC_depth_1mbuffer", "bc", "cnn_precise_all_logs.csv")
